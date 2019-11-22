@@ -23,3 +23,10 @@
     margin: 0;
     margin-left: 2em;
 }
+
+#subtitle {
+    color: #4234ff;
+    font-weight: bolder;
+    font-size: 1.3em;
+    margin-left: 8em;
+}
