@@ -10,7 +10,6 @@
     </head>
     <body>
         <div class="wallpaper"></div>
-        <div class="map"></div>
         <header>
             <div class="logo"><a href="index.html">BRAD</a></div>
             <nav>
@@ -22,20 +21,312 @@
                 </ul>
             </nav>
         </header>
-        <div id="content-box">
-            <h1 id="title">brad rogers</h1>
-            <div>
-                <a class="icon-location-pin">San Francisco, CA</a>
-            </div>
-            <div>
-                <a class="icon-envelope" href="mailto:contact@bradrogers.io"><span>contact@bradrogers.io</span></a>
-            </div>
-            <div>
-                <a class="icon-social-github" href="https://github.com/rogebrd"><span>rogebrd@</span></a>
-            </div>
-            <div>
-                <a class="icon-social-linkedin" href="https://www.linkedin.com/in/rogersbrad/"><span>rogersbrad@</span></a>
+        <div id="map" style="position:fixed;width:100%;height:110%;z-index:-1;background-color:clear;"></div>
+        <div id="content-half">
+            <div id="content-box">
+                <h1 id="title">brad rogers</h1>
+                <div>
+                    <a class="icon-location-pin">San Francisco, CA</a>
+                </div>
+                <div>
+                    <a class="icon-envelope" href="mailto:contact@bradrogers.io"><span>contact@bradrogers.io</span></a>
+                </div>
+                <div>
+                    <a class="icon-social-linkedin" href="https://www.linkedin.com/in/rogersbrad/"><span>rogersbrad</span></a>
+                </div>
+                <div>
+                    <a class="icon-social-github" href="https://github.com/rogebrd"><span>rogebrd@</span></a>
+                </div>
             </div>
         </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBNHOKy0utHSwqQ5v6ipI24wwi153zimk&callback=initMap" async defer></script>
+        <script>
+                var map;
+                var sf = {lat:37.7676188, lng: -122.4373549};
+
+                function initMap() {
+
+                    var marker = new google.maps.Marker({
+                        position: sf,
+                        animation: google.maps.Animation.DROP,
+                        icon: new google.maps.MarkerImage('pin.png',
+                        null, /* size is determined at runtime */
+                        null, /* origin is 0,0 */
+                        null,
+                        new google.maps.Size(22.580, 30)),
+                        title:"SF"
+                    });
+                    
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.6922924, lng: -121.6141804},
+                    zoom: 10,
+                    disableDefaultUI: true,
+                    styles: [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                        {
+                            "color": "#101116"
+                        }
+                        ]
+                    },
+                    {
+                        "elementType": "labels",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                        {
+                            "color": "#212121"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry",
+                        "stylers": [
+                        {
+                            "color": "#757575"
+                        },
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.locality",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#bdbdbd"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.neighborhood",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                        {
+                            "color": "#181818"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                        {
+                            "color": "#1b1b1b"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                        {
+                            "color": "#2c2c2c"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#4234ff"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry",
+                        "stylers": [
+                        {
+                            "color": "#373737"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [
+                        {
+                            "color": "#0A2463"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway.controlled_access",
+                        "elementType": "geometry",
+                        "stylers": [
+                        {
+                            "color": "#4e4e4e"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                        {
+                            "color": "#000000"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                        {
+                            "color": "#3d3d3d"
+                        }
+                        ]
+                    }]});
+                  marker.setMap(map);
+                }
+              </script>
     </body>
 </html>

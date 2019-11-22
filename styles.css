@@ -70,6 +70,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #89B6A5;
     border-bottom: 0.1em solid #89B6A5;
+    border-radius: 0.1em;
 }
 
 nav #selectedPage {
@@ -117,4 +118,5 @@ nav #selectedPage {
 .social a:hover {
     color: #89B6A5;
     border-right: 0.1em solid #89B6A5;
+    border-radius: 0.1em;
 }
