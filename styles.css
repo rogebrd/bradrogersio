@@ -5,6 +5,7 @@ body {
     background-color: #101116;
     font-family: 'Strait', sans-serif;
     color: #ededed;
+    overflow:hidden;
 }
 
 header {
@@ -67,12 +68,12 @@ nav ul li a {
     transition: border 0.2s ease;
 }
 nav ul li a:hover {
-    color: #4234ff;
-    border-bottom: 0.1em solid #4234ff;
+    color: #89B6A5;
+    border-bottom: 0.1em solid #89B6A5;
 }
 
 nav #selectedPage {
-    color: #4234ff;
+    color: #89B6A5;
 }
 
 .logo {
@@ -114,6 +115,6 @@ nav #selectedPage {
 }
 
 .social a:hover {
-    color: #4234ff;
-    border-right: 0.1em solid #4234ff;
+    color: #89B6A5;
+    border-right: 0.1em solid #89B6A5;
 }

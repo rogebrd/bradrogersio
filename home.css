@@ -25,8 +25,14 @@
 }
 
 #subtitle {
-    color: #4234ff;
+    color: #89B6A5;
     font-weight: bolder;
     font-size: 1.3em;
+    margin: 0;
     margin-left: 8em;
+}
+
+#brad {
+    color: #ED6A5A;
+    font-family: 'Indie Flower', cursive;
 }
