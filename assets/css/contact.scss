@@ -1,6 +1,9 @@
 ---
 ---
 
+@import "colors";
+@import "fonts";
+
 .content-half {
     position: fixed;
     top: 0;
@@ -32,7 +35,7 @@
     cursor: default;
     margin: 0;
     padding-bottom: 0.5em;
-    color: #ED6A5A;
+    color: $title-color;
 }
 
 .email {
@@ -41,7 +44,7 @@
 }
 
 .content-box div a::before {
-    font-family: 'simple-line-icons';
+    font-family: $icon-font;
     font-weight: bolder;
     padding-right: 0.5em;
 }
@@ -52,12 +55,12 @@
 }
 
 .content-box div a {
-    font-family: 'Strait', sans-serif;
+    font-family: $main-font;
     font-size: 1.5em;
 }
 
 .content-box div a span:hover {
-    color: #89B6A5;
-    border-bottom: 0.1em solid #89B6A5;
+    color: $accent-color;
+    border-bottom: 0.1em solid $accent-color;
     border-radius: 0.1em;
 }
