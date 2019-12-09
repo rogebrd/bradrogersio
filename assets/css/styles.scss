@@ -20,12 +20,65 @@ body {
     overflow:hidden;
 }
 
-header {
+.header {
+    position: fixed;
+    display: block;
+    top: 0.4em;
+    cursor: default;
     z-index: 100;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+
+    nav {
+        position: fixed;
+        top: 0.4em;
+        right: 1em;
+        margin: 0.67em 0 0.67em 0;
+    }
+
+    &__nav {
+        display: inline;
+        z-index: 100;
+
+        li {
+            list-style-type: none;
+            display: inline;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: auto 0.25em;
+        }
+
+        &__element {
+            padding-bottom: 0.25em;
+            transition: border 0.2s ease;
+
+            &:hover {
+                color: $accent-color;
+                border-bottom: 0.1em solid $accent-color;
+                border-radius: 0.1em;
+            }
+
+            &--selected {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__logo {
+        top: 0.6em;
+        position: fixed;
+        left: 1em;
+        font-size: 2em;
+        font-weight: bold;
+        width: 1.5em;
+        line-height: 0.74em;
+        
+        a {
+            word-wrap: break-word;
+        }
+    }
 }
 
 a {
@@ -48,91 +101,24 @@ a {
     background-size: cover;
 }
 
-header {
-    position: fixed;
-    display: block;
-    top: 0.4em;
-    cursor: default;
-}
-
-.hoverable:hover {
-    color: rgb(184, 184, 184);
-}
-
-nav {
-    position: fixed;
-    top: 0.4em;
-    right: 1em;
-    margin: 0.67em 0 0.67em 0;
-}
-
-#nav {
-    display: inline;
-    z-index: 100;
-}
-
-nav ul li {
-    list-style-type: none;
-    display: inline;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin: auto 0.25em;
-}
-
-nav ul li a {
-    padding-bottom: 0.25em;
-    transition: border 0.2s ease;
-}
-nav ul li a:hover {
-    color: $accent-color;
-    border-bottom: 0.1em solid $accent-color;
-    border-radius: 0.1em;
-}
-
-#selectedPage {
-    color: $accent-color;
-}
-
-.logo {
-    top: 0.6em;
-    position: fixed;
-    left: 1em;
-    font-size: 2em;
-    font-weight: bold;
-    width: 1.5em;
-    line-height: 0.74em;
-}
-
-.logo a {
-    word-wrap: break-word;
-}
-
-.menuIcon {
-    display: inline;
-    cursor: pointer;
-    right: 1em;
-    font-size: 1.5em;
-    margin-left: 0.5em;
-}
-
 .social {
     position: fixed;
     left: 1em;
     bottom: 1em;
-}
 
-.social a {
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0.25em;
-    padding: 0;
-    padding-right: 0.25em;
-    transition: border 0.2s ease;
-}
+    &__link {
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
+        margin: 0.25em;
+        padding: 0;
+        padding-right: 0.25em;
+        transition: border 0.2s ease;
 
-.social a:hover {
-    color: $accent-color;
-    border-right: 0.1em solid $accent-color;
-    border-radius: 0.1em;
+        &:hover {
+            color: $accent-color;
+            border-right: 0.1em solid $accent-color;
+            border-radius: 0.1em;
+        }
+    }
 }

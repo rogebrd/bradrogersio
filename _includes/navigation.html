@@ -1,9 +1,9 @@
-<header>
-    <div class="logo"><a href="#">BRAD</a></div>
+<header class="header">
+    <div class="header__logo"><a href="#">BRAD</a></div>
     <nav>
-        <ul class="nav">
-            <li><a class="icon-home" style="font-weight:bolder" {% if page.url == "/" %} href="#" {% else %} href="index.html" {% endif %}></a></li>
-            <li><a {% if page.url == "/contact.html" %} class="selectedPage" href="#" {% else %} href="contact.html" {% endif %} href="contact.html">contact</a></li>
+        <ul class="header__nav">
+            <li><a class="icon-home header__nav__element" style="font-weight:bolder" {% if page.url == "/" %} href="#" {% else %} href="index.html" {% endif %}></a></li>
+            <li><a {% if page.url == "/contact.html" %} class="header__nav__element header__nav__element--selectedPage" href="#" {% else %} class="header__nav__element" href="contact.html" {% endif %} href="contact.html">contact</a></li>
         </ul>
     </nav>
 </header>
