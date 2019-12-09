@@ -1,4 +1,4 @@
-#content-box {
+.content-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,14 +13,14 @@
     user-select: none; /* Standard */
 }
 
-#title {
+.title {
     font-size: 6em;
     font-weight: bolder;
     cursor: default;
     margin: 0;
 }
 
-#title2 {
+.title2 {
     font-size: 6em;
     font-weight: bolder;
     cursor: default;
@@ -28,7 +28,7 @@
     margin-left: 2em;
 }
 
-#subtitle {
+.subtitle {
     color: #89B6A5;
     font-weight: bolder;
     font-size: 1.3em;
@@ -36,7 +36,7 @@
     margin-left: 8em;
 }
 
-#brad {
+.brad {
     color: #ED6A5A;
     font-family: 'Indie Flower', cursive;
 }

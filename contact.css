@@ -1,4 +1,4 @@
-#content-half {
+.content-half {
     position: fixed;
     top: 0;
     right: 0;
@@ -9,7 +9,7 @@
     box-shadow: -10px 0px 10px rgba(21, 20, 23, 0.7);
 }
 
-#content-box {
+.content-box {
     position: fixed;
     top: 20%;
     right: 2em;
@@ -23,7 +23,7 @@
     user-select: none; /* Standard */
 }
 
-#title {
+.title {
     font-size: 4em;
     font-weight: bolder;
     cursor: default;
@@ -32,28 +32,28 @@
     color: #ED6A5A;
 }
 
-#email {
+.email {
     font-size: 1.3em;
     padding-left: 1em;
 }
 
-#content-box div a::before {
+.content-box div a::before {
     font-family: 'simple-line-icons';
     font-weight: bolder;
     padding-right: 0.5em;
 }
 
-#content-box div {
+.content-box div {
     padding: 1em;
     margin: auto;
 }
 
-#content-box div a {
+.content-box div a {
     font-family: 'Strait', sans-serif;
     font-size: 1.5em;
 }
 
-#content-box div a span:hover {
+.content-box div a span:hover {
     color: #89B6A5;
     border-bottom: 0.1em solid #89B6A5;
     border-radius: 0.1em;
