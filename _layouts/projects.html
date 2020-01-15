@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% include header.html %}
+
+<body>
+    <div class="wallpaper"></div>
+    {% include navigation.html %}
+    <div class="projects">
+        {% for project in site.data.projects %}
+        <div class="projects__container">
+            <a class="projects__container__card" href="{{ project.url }}">
+                <img src="{{ project.img }}">
+                <h2>{{ project.title}}</h2>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

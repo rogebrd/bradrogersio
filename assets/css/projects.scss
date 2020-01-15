@@ -1,0 +1,78 @@
+---
+---
+
+@import "colors";
+@import "fonts";
+
+$project-padding-vertical-amount: 15vh;
+$project-padding-horizontal-amount: 20vh;
+$project-box-height: 70vh;
+$project-box-width: 100vh;
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+
+    &::-webkit-scrollbar {
+        display: none;
+      }
+
+    &__container {
+        width: $project-box-width;
+        height: $project-box-height;
+        padding: $project-padding-vertical-amount $project-padding-horizontal-amount;
+
+        &__card {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 5px solid $text-color;
+            border-radius: 24px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                backface-visibility: hidden;
+                transition: .3s ease;
+            }
+
+            &:hover {
+                img {
+                    opacity: 0.2;
+                }
+
+                h2 {
+                    opacity: 1;
+                }
+            }
+
+            h2 {
+                transition: 0.3s ease;
+                opacity: 0;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                margin: auto;
+                font-style: italic;;
+                font-family: 'Raleway', sans-serif;;
+                font-size: 4em;
+                font-weight: bolder;
+                z-index: 1;
+            }
+        }
+    }
+}

@@ -14,17 +14,25 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/styles.css">
     {% if page.url=="/" %}
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap">
     {% elsif page.url=="/contact.html" %}
     <link rel="stylesheet" href="assets/css/contact.css">
+    {% elsif page.url=="/bradrogersio.html" %}
+    <link rel="stylesheet" href="assets/css/bradrogersio.css">
+    {% elsif page.url=="/smartpot.html" %}
+    <link rel="stylesheet" href="assets/css/smartpot.css">
+    {% elsif page.url=="/projects.html" %}
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     {% endif %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Strait&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
 
     <meta property="og:title" content="bradrogers.io" />
     <meta property="og:site_name" content="bradrogers.io" />
@@ -37,7 +45,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16906996-5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-16906996-5');

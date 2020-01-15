@@ -1,28 +1,34 @@
 <!doctype html>
 <html>
-    {% include header.html %}
-    <body>
-        <div class="wallpaper"></div>
-        {% include navigation.html %}
-        <div id="map" style="position:fixed;width:100%;height:110%;z-index:-1;background-color:clear;"></div>
-        <div class="content-half">
-            <div class="content-box">
-                <h1 class="title">brad rogers</h1>
-                <div>
-                    <a class="icon-location-pin">San Francisco, CA</a>
-                </div>
-                <div>
-                    <a class="icon-envelope" href="mailto:{{ site.data.contact.email }}"><span>{{ site.data.contact.email }}</span></a>
-                </div>
-                <div>
-                    <a class="icon-social-linkedin" href="{{ site.data.contact.linkedin.link }}"><span>{{ site.data.contact.linkedin.name }}</span></a>
-                </div>
-                <div>
-                    <a class="icon-social-github" href="{{ site.data.contact.github.link }}"><span>{{ site.data.contact.github.name }}</span></a>
-                </div>
+{% include header.html %}
+
+<body>
+    <div class="wallpaper"></div>
+    {% include navigation.html %}
+    <div id="map" style="position:fixed;width:100%;height:110%;z-index:-1;background-color:clear;"></div>
+    <div class="content-half">
+        <div class="content-box">
+            <h1 class="title">brad rogers</h1>
+            <div>
+                <a class="icon-location-pin">San Francisco, CA</a>
+            </div>
+            <div>
+                <a class="icon-envelope"
+                    href="mailto:{{ site.data.contact.email }}"><span>{{ site.data.contact.email }}</span></a>
+            </div>
+            <div>
+                <a class="icon-social-linkedin"
+                    href="{{ site.data.contact.linkedin.link }}"><span>{{ site.data.contact.linkedin.name }}</span></a>
+            </div>
+            <div>
+                <a class="icon-social-github"
+                    href="{{ site.data.contact.github.link }}"><span>{{ site.data.contact.github.name }}</span></a>
             </div>
         </div>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBNHOKy0utHSwqQ5v6ipI24wwi153zimk&callback=initMap" async defer></script>
-        <script src="assets/js/googlemaps.js"></script>
-    </body>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBNHOKy0utHSwqQ5v6ipI24wwi153zimk&callback=initMap"
+        async defer></script>
+    <script src="assets/js/googlemaps.js"></script>
+</body>
+
 </html>
