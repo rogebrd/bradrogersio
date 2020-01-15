@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+{% include header.html %}
+
+<body>
+    <div class="wallpaper"></div>
+    {% include navigation.html %}
+    <div class="title">
+        <img src="assets/img/greensense_color.jpg">
+    </div>
+    <div class="content">
+        <h2><span>greensense</span>.io</h2>
+        <p align="justify">
+            greensense is a work in progress aiming to collect metrics and inform the owner of a greenhouse. The system
+            will work by employing an array of sensor modules which connect to a singular master module. The sensor
+            modules will be created using an Arduino board powered via battery, communicating with the master via
+            wifi. The master will be ran on a RasberryPi and run a lightweight Linux build to create the necessary wifi
+            network, communicate with the slaves, and transmit the data to the cloud. The final component is a cloud
+            component responsible for taking the data emitted by the sensors and creating graphs and analytics
+            dashboards to track and monitor all aspects of the greenhouse.
+        </p>
+        <p align="justify">
+            The current code is available on the github link. Currently, I have built the sensor module power board and
+            am in the process of fabricating them. The APIs to upload the data to the cloud are also created with
+            cloudFormation.
+        </p>
+        <p align="justify">
+            Will update as work progresses.
+        </p>
+        <div class="content__social">
+            <a class="icon-social-github" href="https://github.com/rogebrd/bradrogersio"></a>
+            <a class="icon-share" onclick="toggle_share()"></a>
+            <a class="icon-link" href="https://bradrogers.io"></a>
+            <div id="share" class="content__social__share">
+                <div class="content__social__share__container">
+                    <a class="icon-social-linkedin"
+                        href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fbradrogers.io%greensense.html"></a>
+                    <a class="icon-social-facebook"
+                        href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fbradrogers.io%greensense.html"></a>
+                    <a class="icon-social-twitter"
+                        href="https://twitter.com/intent/tweet?text=Check%20out%20this%20site%21%20http%3A%2F%2Fbradrogers.io%greensense.html"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggle_share() {
+            var share_div = document.getElementById("share");
+            if (share_div.style.opacity == 0) {
+                share_div.style.opacity = 1;
+            } else {
+                share_div.style.opacity = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
