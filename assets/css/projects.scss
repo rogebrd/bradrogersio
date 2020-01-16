@@ -3,6 +3,7 @@
 
 @import "colors";
 @import "fonts";
+@import "mixins";
 
 $project-padding-vertical-amount: 15vh;
 $project-padding-horizontal-amount: 20vh;
@@ -17,10 +18,7 @@ $project-box-width: 100vh;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     height: 100vh;
-
-    &::-webkit-scrollbar {
-        display: none;
-      }
+    @include hide-scrollbar;
 
     &__container {
         width: $project-box-width;

@@ -1,0 +1,87 @@
+// POSITION
+@mixin flex-center {
+    display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+}
+
+// ICON-VIEWS
+@mixin hover-border-bottom {
+    padding-bottom: 0.5em;
+    transition: border 0.2s ease;
+    border-bottom: 0.1em solid transparent;
+    border-radius: 0.1em;
+
+    &:hover {
+        color: $accent-color;
+        border-bottom: 0.1em solid $accent-color;
+        border-radius: 0.1em;
+    }
+}
+
+@mixin hover-border-right {
+    padding-right: 0.5em;
+    transition: border 0.2s ease;
+    border-right: 0.1em solid transparent;
+    border-radius: 0.1em;
+
+    &:hover {
+        color: $accent-color;
+        border-right: 0.1em solid $accent-color;
+        border-radius: 0.1em;
+    }
+}
+
+// FUNCTIONAL
+@mixin unselectable {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+@mixin default-cursor {
+    cursor: default;
+}
+
+@mixin hide-scrollbar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin no-list-style {
+    list-style-type: none;
+}
+
+// MISC
+@mixin top-arrow {
+    &::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid $text-color;
+        right: 45%;
+        top: -23px;
+    }
+
+    &::after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        right: 45%;
+        top: -18px;
+    }
+}

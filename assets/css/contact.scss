@@ -3,6 +3,7 @@
 
 @import "colors";
 @import "fonts";
+@import "mixins";
 
 .content-half {
     position: fixed;
@@ -23,10 +24,7 @@
     height: 50%;
     margin: 0;
     opacity: 1;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+    @include unselectable;
 }
 
 .title {
