@@ -4,6 +4,17 @@
 @import "colors";
 @import "fonts";
 @import "mixins";
+@import "breakpoints";
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    overflow-y: scroll;
+    @include hide-scrollbar;
+}
 
 body {
     overflow-x: hidden;
@@ -51,6 +62,10 @@ body {
 
     p {
         width: 40%;
+
+        @media (max-width: $screen-lg-min) {
+            width: 90%;
+        }
     }
 
     a {
@@ -82,6 +97,11 @@ body {
             border-radius: 24px;
             transition: all 0.3s ease;
             @include flex-center;
+
+            @media (max-width: $screen-lg-min) {
+                opacity: 1;
+                pointer-events: none;
+            }
 
             &__container {
                 margin: 0;

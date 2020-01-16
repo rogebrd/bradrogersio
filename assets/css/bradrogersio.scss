@@ -4,9 +4,14 @@
 @import "colors";
 @import "fonts";
 @import "mixins";
+@import "breakpoints";
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
 body {
-    overflow-x: hidden;
     overflow-y: scroll;
     @include hide-scrollbar;
 }
@@ -53,6 +58,10 @@ body {
         margin-top: 80px;
         width: 40%;
 
+        @media (max-width: $screen-lg-min) {
+            width: 90%;
+        }
+
         img {
             width: 100px;
             height: 100px;
@@ -65,6 +74,10 @@ body {
 
         p {
             width: 40%;
+
+            @media (max-width: $screen-lg-min) {
+                width: 60%;
+            }
         }
 
         img {
@@ -79,6 +92,11 @@ body {
         box-shadow: 10px 10px 20px $title-color, -10px 10px 20px $title-color, 10px -10px 20px $title-color, -10px -10px 20px $title-color;
         margin-top: 80px;
         margin-bottom: 80px;
+
+        @media (max-width: $screen-lg-min) {
+            width: 100%;
+            border-radius: 0;
+        }
     }
 
     &__icon {
@@ -90,6 +108,10 @@ body {
         margin: 40px;
         border-radius: 20px;
         width: 40%;
+
+        @media (max-width: $screen-lg-min) {
+            width: 70%;
+        }
     }
 
     a {
@@ -121,6 +143,11 @@ body {
             border-radius: 24px;
             transition: all 0.3s ease;
             @include flex-center;
+
+            @media (max-width: $screen-lg-min) {
+                opacity: 1;
+                pointer-events: none;
+            }
 
             &__container {
                 margin: 0;

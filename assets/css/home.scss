@@ -4,6 +4,7 @@
 @import "colors";
 @import "fonts";
 @import "mixins";
+@import "breakpoints";
 
 .content-box {
     flex-direction: column;
@@ -19,6 +20,10 @@
     font-weight: bolder;
     margin: 0;
     @include default-cursor;
+
+    @media (max-width: $screen-lg-min) {
+        font-size: 4em;
+    }
 }
 
 .title2 {
@@ -27,6 +32,11 @@
     margin: 0;
     margin-left: 2em;
     @include default-cursor;
+
+    @media (max-width: $screen-lg-min) {
+        font-size: 4em;
+        margin-left: 0;
+    }
 }
 
 .subtitle {
@@ -35,6 +45,10 @@
     font-size: 1.3em;
     margin: 0;
     margin-left: 8em;
+
+    @media (max-width: $screen-lg-min) {
+        margin-left: 0;
+    }
 }
 
 .brad {

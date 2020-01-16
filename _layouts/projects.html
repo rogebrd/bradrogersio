@@ -16,13 +16,25 @@
         {% endfor %}
     </div>
     <script>
-        var item = document.getElementById('scroller');
+        window.addEventListener('resize', setScroll);
+        window.addEventListener('load', setScroll);
 
-        window.addEventListener('wheel', function (e) {
+        function setScroll() {
+            console.log(window.screen.width);
+            if (window.screen.width > 992) {
+                console.log("big enough for side scroll");
+                window.addEventListener('wheel', sideScroll);
+            } else {
+                window.removeEventListener('wheel', sideScroll);
+            }
+        }
 
+        function sideScroll(e) {
+            var item = document.getElementById('scroller');
             if (e.deltaY > 0) item.scrollLeft += 100;
             else item.scrollLeft -= 100;
-        });
+        }
+
     </script>
 </body>
 

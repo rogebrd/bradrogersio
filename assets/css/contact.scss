@@ -4,6 +4,7 @@
 @import "colors";
 @import "fonts";
 @import "mixins";
+@import "breakpoints";
 
 .content-half {
     position: fixed;
@@ -14,6 +15,11 @@
     margin: 0;
     background-color: rgba(21, 20, 23, 0.7);
     box-shadow: -10px 0px 10px rgba(21, 20, 23, 0.7);
+
+    @media (max-width: $screen-lg-min){
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .content-box {
@@ -25,6 +31,17 @@
     margin: 0;
     opacity: 1;
     @include unselectable;
+
+    @media (max-width: $screen-lg-min){
+        position: relative;
+        flex-direction: column;
+        @include flex-center;
+        height: 100%;
+        width: 100%;
+        top: 10%;
+        left: auto;
+        right: auto;
+    }
 }
 
 .title {
@@ -34,6 +51,10 @@
     margin: 0;
     padding-bottom: 0.5em;
     color: $title-color;
+
+    @media (max-width: $screen-lg-min){
+        font-size: 2em;
+    }
 }
 
 .email {
@@ -50,11 +71,22 @@
 .content-box div {
     padding: 1em;
     margin: auto;
+
+    @media (max-width: $screen-lg-min){
+        padding: 0;
+        margin: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
 }
 
 .content-box div a {
     font-family: $main-font;
     font-size: 1.5em;
+
+    @media (max-width: $screen-lg-min){
+
+    }
 }
 
 .content-box div a span:hover {

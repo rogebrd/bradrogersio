@@ -4,6 +4,7 @@
 @import "colors";
 @import "fonts";
 @import "mixins";
+@import "breakpoints";
 
 $project-padding-vertical-amount: 15vh;
 $project-padding-horizontal-amount: 20vh;
@@ -21,10 +22,25 @@ $project-box-width: 100vh;
     width: auto;
     @include hide-scrollbar;
 
+    @media (max-width: $screen-lg-min) {
+        flex-direction: row;
+        overflow: scroll;
+        width: 100%;
+        padding-top: 10vh;
+        height: auto;
+        max-height: 100vh;
+    }
+
     &__container {
         width: $project-box-width;
         height: $project-box-height;
         padding: $project-padding-vertical-amount $project-padding-horizontal-amount;
+
+        @media (max-width: $screen-lg-min) {
+                width: 80vw;
+                height: 50vw;
+                padding: 5vh 10vw;
+        }
 
         &__card {
             width: 100%;
@@ -43,6 +59,10 @@ $project-box-width: 100vh;
                 z-index: -1;
                 backface-visibility: hidden;
                 transition: .3s ease;
+
+                @media (max-width: $screen-lg-min) {
+                    opacity: 0.2;
+                }
             }
 
             &:hover {
@@ -71,6 +91,11 @@ $project-box-width: 100vh;
                 font-size: 4em;
                 font-weight: bolder;
                 z-index: 1;
+
+                @media (max-width: $screen-lg-min) {
+                    opacity: 1;
+                    font-size: 1em;
+                }
             }
         }
     }
