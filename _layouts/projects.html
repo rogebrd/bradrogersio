@@ -5,7 +5,7 @@
 <body>
     <div class="wallpaper"></div>
     {% include navigation.html %}
-    <div class="projects">
+    <div class="projects" id="scroller">
         {% for project in site.data.projects %}
         <div class="projects__container">
             <a class="projects__container__card" href="{{ project.url }}">
@@ -15,7 +15,15 @@
         </div>
         {% endfor %}
     </div>
+    <script>
+        var item = document.getElementById('scroller');
 
+        window.addEventListener('wheel', function (e) {
+
+            if (e.deltaY > 0) item.scrollLeft += 100;
+            else item.scrollLeft -= 100;
+        });
+    </script>
 </body>
 
 </html>
